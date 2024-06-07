@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            text-align: center;
+        }
+        div{
+            width: 100px;
+            height:200px;
+            background-color:grey;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="event1">click</div>
+    <div id="event2">double click</div>
+    <div id="event3">mouse enter</div>
+    <div id="event4">mouse leave</div>
+    <div id="event5">mouse up</div>
+    <div id="event6">mouse down</div>
+    <div id="event7">on function</div>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#event1").click(function(){
+                alert("click event executed");
+            });
+            $("#event2").dblclick(function(){
+                alert("dblclick event executed");
+            });
+            $("#event3").mouseenter(function(){
+                alert("mouse enter event executed");
+            });
+            $("#event4").mouseleave(function(){
+                alert("mouse leave event executed");
+            });
+            $("#event5").mouseup(function(){
+                alert("mouse up event executed");
+            });
+            $("#event6").mousedown(function(){
+                alert("mouse down event executed");
+            });
+            $("#event7").on("click", function(){
+                alert("on function event executed");
+            });
+        });
+    </script>
+</body>
+</html>

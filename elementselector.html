@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elementselector</title>
+</head>
+<body>
+   <h1 id="ele1">hello</h1>
+   <h2 class="ele2">control</h2>
+   <h3 id="ele3">entered</h3>
+   <script src="jquery.js"></script> 
+   <script>
+    // id selector
+    $(document).ready(function(){
+        $("#ele1").click(function(){
+            alert("hello");
+    });
+    // class selector
+    $(document).ready(function(){
+        $(".ele2").click(function(){
+             console.log("executed");
+        }); 
+    });
+    $(document).ready(function(){
+       $("#ele3").click(function(){
+        var e1=$(this).html();
+             console.log(e1);
+       });
+       
+    });
+    });
+   </script>
+</body>
+</html>

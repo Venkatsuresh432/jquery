@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi element selector</title>
+</head>
+<body>
+    <h1 class="cl1">manda patharam</h1>
+    <h2 id="id1">enna na solrathu</h2>
+    <h3 class="cl2">paathu irunthuko</h3>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("h1, h2, h3").css("color", "blue");
+            $(".cl1, #id1, .cl2").html("ennamo yaedho");
+            $(".cl1").click(function(){
+                alert("h1 clicked");
+            });
+            $("#id1").click(function(){
+                console.log("paakatha da");
+            });
+            $(".cl2").click(function(){
+               var print =$(this).html();
+               console.log(print);
+            });
+
+        });
+    </script>
+</body>
+</html>

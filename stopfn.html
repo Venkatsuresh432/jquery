@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Stop fn</title>
+    <style>
+        body{
+            position: relative;
+        }
+        #con1{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            position: absolute;
+            opacity: 0.5;
+            top:100px;
+            left:300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="con1"></div>
+    <button id="btn1">start</button>
+    <button id="btn2">stop</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+              $("#con1").animate({
+                "left":"400px",
+                "width":"300px",
+                "height":"300px",
+                "opacity":1
+            },7000)
+            $("#btn2").click(function(){
+                $("#con1").stop();
+            })
+           });
+        });
+    </script>
+</body>
+</html>

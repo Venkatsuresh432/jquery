@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade</title>
+    <style>
+        div{
+            background-color: grey;
+            width:100px;
+            height:100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fd1"></div>
+    <div id="fd2"></div>
+    <button id="fadein">fade in</button>
+    <div id="fd3"></div>
+    <div id="fd4"></div>
+    <button id="fadeout">fade out</button>
+    <div id="fd5"></div>
+    <div id="fd6"></div>
+    <button id="fadetoggle">fade toggle</button>
+    <div id="fd7"></div>
+    <div id="fd8"></div>
+    <button id="fadeto">fade to</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // fade in
+            $("#fadein").click(function(){
+                $("#fd1, #fd2").fadein("slow");
+            });
+            // fade out
+            $("#fadeout").click(function(){
+                $("#fd3, #fd4").fadeOut(3000);
+            });
+            // fade toggle
+            $("#fadetoggle").click(function(){
+                $("#fd5, #fd6").fadeToggle(3000);
+            });
+            // fade to
+            // these contain two parameter speed and opacity (0-1) callback
+            $("#fadeto").click(function(){
+                $("#fd7, #fd8").fadeTo("slow", 0.4);
+            });
+        });
+    </script>
+</body>
+</html>

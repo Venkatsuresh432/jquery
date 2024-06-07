@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sl1,#sl2
+        {
+            height: 5px;
+            background-color: aquamarine;
+            padding:5px;
+            text-align: center;
+        }
+        #sl2{
+            padding: 50px;
+            display: none;
+        }
+        #sl3,#sl4
+        {
+            height: 5px;
+            background-color: aquamarine;
+            padding:5px;
+            text-align: center;
+        }
+        #sl4{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="sl1">click to in</div>
+    <div id="sl2">hello</div>
+    <br>
+    <button id="slidein">in</button>
+    <!-- <button id="slideout">out</button> -->
+    <br>
+    <div id="sl3">click to in</div>
+    <div id="sl4">hello</div>
+    <br>
+    <button id="slidetoggle">toggle</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#slidein").click(function(){
+                $("#sl2").slideUp(3000);
+            });
+            $("#sl1").click(function(){
+                $("#sl2").slideDown(3000);
+            });
+            $("#sl3").click(function(){
+                $("#sl4").slideToggle("slow");
+            });
+
+        });
+
+    </script>
+</body>
+</html>

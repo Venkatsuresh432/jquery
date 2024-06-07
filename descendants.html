@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for using to change the content or style using .children or find -->
+    <div id="parent">
+        <ul>
+            <li>con1</li>
+            <li>con2</li>
+            <li>con3</li>
+            <li>
+                <ul>
+                    <li>con4</li>
+                    <li>con5</li>
+                    <li>con6</li>
+                    <li>con7</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <ul class="parent2">
+        <li>con1</li>
+        <li>con2</li>
+        <li>con3</li>
+        <li>
+            <ul>
+                <li>con4</li>
+                <li>con5</li>
+                <li>con6</li>
+                <li>con7</li>
+            </ul>
+        </li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // using .children() method
+            $("#parent ul").children("li").css("color","red");
+            // using .find() method
+            $(".parent2").find("li").css("color","aqua");
+        });
+    </script>
+</body>
+</html>

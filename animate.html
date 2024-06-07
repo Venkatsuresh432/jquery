@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            /* display: flex;
+            flex-direction: column; */
+
+        }
+        div{
+            width: 100px;
+            height:100px;
+            background-color: gray;
+            margin: 20px;
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="an1">animate</div>
+    <button id="bt1">click</button>
+    <div id="an2"></div>
+    <button id="bt2">click</button>
+    <div id="an3"></div>
+    <button id="bt3">click</button>
+    <div id="an4"></div>
+    <button id="bt4">click</button>
+    <div id="an5">content</div>
+    <button id="bt5">click</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $("#an1").animate({"height":"150px","width":"150px","left":"400px","opacity":1});
+                // $("#an1").animate({"left":400})
+            });
+            $("#bt2").click(function(){
+                $("#an2").animate({
+                    "left":"600px",
+                    "height":"150px",
+                    "width":"150px",
+                    "opacity":"0.5"
+                })
+            });
+            $("#bt3").click(function(){
+                $("#an3").animate({
+                    "height":"toggle",
+                    "speed":4000,
+                    "opacity":1
+                })
+            });
+            $("#bt4").click(function(){
+                var d =$("#an4")
+                d.animate({"left":"200px", "opacity":0.3, "width":"200px"},"slow");
+                d.animate({"height":"200px", "opacity":0.7,},"slow");
+                d.animate({"right":"200px","opacity":1,"width":"100px","height":"100px"},"slow").hide(2000);
+            });
+            $("#bt5").click(function(){
+                var dvar =$("#an5")
+                dvar.animate({"top":"300px","opacity":0.5},"slow");
+                dvar.animate({"text-align":"center", "text-size":"30px","opacity":1},"slow");
+            });
+        });
+    </script>
+</body>
+</html>

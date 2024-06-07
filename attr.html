@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/image4.jpg" alt="car" width="700" height="500">
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("img").click(function(){
+            let im=$(this).attr("src");
+            alert(im);
+            $(this).attr("src","img/image5.jpg");
+            $(this).attr("width","600");
+           });
+        });
+    </script>
+</body>
+</html>

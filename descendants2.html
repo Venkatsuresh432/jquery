@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            font-size: 30px;
+            color:grey;
+            font-family: sans-serif;
+        }
+        .change{
+            font-size: 20px;
+            color:blue;
+            font-family: courier;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <ul>
+            <li>con1</li>
+            <li>con2</li>
+            <li>con3</li>
+            <li>
+                <ul>
+                    <li>con4</li>
+                    <li>con5</li>
+                    <li>con6</li>
+                    <li>con7</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".parent ul").children("li:first-child").addClass("change");
+        $(".parent ul").children().last().addClass("change");
+    });
+</script>
+</body>
+</html>

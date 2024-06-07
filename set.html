@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="con1">these conatin <b>bold</b> charecter in line</p>
+    <p id="con2">these line conatin <i>italic value</i></p>
+    
+    <button id="btn1">click</button>
+    <br>
+    <br>
+    <input type="text" id="textarea" class="area1" value="">
+    <br>
+    <br>
+    <button id="btn2">click</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function()
+            {
+                $("#con1").text(function(index,origval)
+                {
+                return "old cont: "+origval+ "new cont: hello buddy value: "+ index +"."; 
+                });
+                $("#con2").html(function(index,org){
+                    return "old cont: "+ org +". new val: new cont. index: "+index+".";
+                })
+            });
+           $("#btn2").click(function(){
+                $("input").attr({
+                    "id":"area1",
+                    "class":"text1",
+                    "value":"hello buddy"
+                })
+                console.log($("input").attr("id"));
+           });
+        });
+    </script>
+</body>
+</html>

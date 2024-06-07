@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="cont1">this line contains <b>bold</b> element <i>italic</i> and <u>underlined content</u> </p>
+   
+
+    <button id="btn1">show text</button>
+    <button id="btn2">show html</button>
+
+    <p id="cont2">textbox:<input type="text" id="name" class="textb1" value="dummy"></p>
+    <button id="btn3">show value</button>
+    <button id="btn4">class attr</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+             $("#btn1").click(function(){
+                alert("text: "+$("#cont1").text());
+                alert("HTM: "+$("body").children("p:nth-child(1)").html());
+             });
+             $("#btn2").click(function(){
+                alert("HTML: "+$("#cont1").html());
+             });
+             $("#btn3").click(function(){
+                alert("value: "+$("#cont2 input").val());
+                alert("text: " +$("body p input").val());
+             });    
+             $("#btn4").click(function(){
+                // $("body").children("p:nth-child(2)").alert("attribute".attr("class"))
+                alert("class: "+$("#cont2 input").attr("value"));
+             });
+        });
+    </script>
+</body>
+</html>
